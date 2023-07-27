@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .detail-text {
+        color: rgb(238, 30, 117);
+        float: right;
+      }
+
+      .link {
+        font-size: 13px;
+        color: rgb(6, 6, 233);
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      td,
+      th {
+        padding: 13px 15px;
+        border: solid 1.5px black;
+        border-collapse: collapse;
+      }
+
+      th {
+        font-size: 16px !important;
+        text-align: left;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <img src="cid:o1" alt="payment-info" height="250px" width="450px" />
+    </div>
+    <p style="line-height: 25px">
+      <b>Dear {{GuestName}},</b><br /><br />Thanks for purchasing with our
+      PayPre Application. We
+      acknowledge the receipt of your payment through our payment gateway.<br /><br />The
+      details of your purchasing are stated as below:
+    </p>
+    <div>
+      <table style="width: 60%; font-size: 14px; font-weight: 500">
+        <tr>
+          <th
+            colspan="2"
+            style="
+              background-color: rgb(13, 155, 136);
+              color: white;
+              font-weight: 600;
+            "
+          >
+            Payment E-Receipt
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <b>Guest Name:</b> <span class="detail-text">{{GuestName}}</span>
+          </td>
+          <td>Application Name: <span class="detail-text">{{AppName}}</span></td>
+        </tr>
+        <tr>
+          <td>
+            <b>Invoice Number:</b>
+            <span class="detail-text">{{BookingId}}</span>
+          </td>
+          <td>
+            <b>Payment Type:</b> <span class="detail-text">Online Booking</span>
+          </td>
+        </tr>
+        <tr>
+          <td><b>Amount:</b> <span class="detail-text">{{Amount}}</span></td>
+          <td>
+            <b>Payment Date:</b>
+            <span class="detail-text">{{PaymentDate}}</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <br />
+    <p><b>Please refer to attached document for invoice details.</b></p>
+    <br />
+    <p class="link">
+      This is a system generated e-mail, please do not reply to this e-mail. For
+      further details, kindly visit our website
+      <a href="https://paypre.paypre/" target="_blank">www.paypre.in</a>
+    </p>
+    <br />
+    <p>Enjoy your purchasing.</p>
+    <br />
+    <p style="font-weight: 500">
+      <b>
+        Regards,<br />
+        Manager<br />
+        Paypre<br />
+        <!-- {{City}}, {{State}}-{{Zipcode}} -->
+      </b>
+    </p>
+  </body>
+</html>
